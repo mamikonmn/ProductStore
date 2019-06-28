@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace ProductStore.DAL.IRepositories
 {
+    /// <summary>
+    /// Base reporsitory for all repositories and contain base functionality for child reporsitories
+    /// </summary>
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
+        // Child repositories can use it which will be one for all repositories and disposing, so we can dispose all DBContext instance from all child repositorys at once
         protected readonly DbContext Context;
 
         public BaseRepository(DbContext context)
