@@ -2,7 +2,7 @@
 
 namespace ProductStore.DAL.IRepositories
 {
-    public interface IProductRepository : IRepository<Product>
+    public interface IProductRepository : IBaseRepository<Product>
     {
         //Product GeSpecificProduct(int id);
     }

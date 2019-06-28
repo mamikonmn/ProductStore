@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductStore.DAL.IRepositories
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface ICategoryRepository : IBaseRepository<Category>
     {
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductStore.DAL.IRepositories
 {
-    public interface IOrderItemRepository : IRepository<OrderItem>
+    public interface IOrderItemRepository : IBaseRepository<OrderItem>
     {
 
         void Add(OrderItem entity);

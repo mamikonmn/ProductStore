@@ -10,9 +10,6 @@ namespace ProductStore.Web.API.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using Ninject.Web.WebApi;
-    using System.Web.Http;
-    using Core;
 
     public static class NinjectWebCommon 
     {
@@ -49,7 +46,6 @@ namespace ProductStore.Web.API.App_Start
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
-                GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
                 return kernel;
             }
             catch
@@ -65,7 +61,6 @@ namespace ProductStore.Web.API.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IStoreManager>().To<StoreManager>();
         }        
     }
 }

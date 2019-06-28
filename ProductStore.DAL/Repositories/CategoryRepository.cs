@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace ProductStore.DAL.Repositories
 {
-    public class CategoryRepository : Repository<Category>, ICategoryRepository
+    public class CategoryRepository : BaseRepository<Category>, ICategoryRepository
     {
         public CategoryRepository(ProductStoreDBContext context) : base(context)
         {

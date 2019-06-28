@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ProductStore.DAL.IRepositories
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext Context;
 
-        public Repository(DbContext context)
+        public BaseRepository(DbContext context)
         {
             Context = context;
         }
@@ -36,7 +36,5 @@ namespace ProductStore.DAL.IRepositories
         {
             return Context.Set<TEntity>().SingleOrDefault(predicate);
         }
-
-
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProductStore.DAL.Repositories
 {
-    public class OrderRepository : Repository<Order>, IOrderRepository
+    public class OrderRepository : BaseRepository<Order>, IOrderRepository
     {
 
         public OrderRepository(ProductStoreDBContext context)
